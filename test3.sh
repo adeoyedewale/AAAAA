@@ -9,7 +9,6 @@ else
 fi
 
 # Replace content of first version element in parent project
-cd jasper-letters
 sed -i -E '0,/<(version)>[^<]+<\/version>/{s/<(version)>[^<]+<\/version>/<version>'$TAG'<\/version>/}' pom.xml
 
 # Replace nested version inside parent element in child modules
